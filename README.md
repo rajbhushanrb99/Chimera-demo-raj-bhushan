@@ -14,6 +14,7 @@ This is a simple Spring Boot application to manage student course enrollments, d
 - **Spring Boot 3.x**
 - **JPA** (for database interaction)
 - **MySQL Database** (for persistence)
+- **Java 17**
 
 ## Important Endpoints
 
