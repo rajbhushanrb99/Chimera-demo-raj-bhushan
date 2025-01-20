@@ -13,8 +13,8 @@ public class Course {
     @Column(unique = true)
     private String name;
 
-    @OneToMany(mappedBy = "course")
-    private Set<StudentCourseEnrollment> studentCourses;
+    @ManyToMany(mappedBy = "courses")
+    private Set<Student> students;
 
     public Long getId() {
         return id;
@@ -32,12 +32,12 @@ public class Course {
         this.name = name;
     }
 
-    public Set<StudentCourseEnrollment> getStudentCourses() {
-        return studentCourses;
+    public Set<Student> getStudents() {
+        return students;
     }
 
-    public void setStudentCourses(Set<StudentCourseEnrollment> studentCourses) {
-        this.studentCourses = studentCourses;
+    public void setStudents(Set<Student> students) {
+        this.students = students;
     }
 }
 

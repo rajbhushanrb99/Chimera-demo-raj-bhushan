@@ -29,7 +29,7 @@ This is a simple Spring Boot application to manage student course enrollments, d
 - **Request Param**: `date` (format: `yyyy-MM-dd`)
 
   ### 2. Enroll student in course along with date
-- **URL**: `/api/v1/enrollment//{studentId}/enroll/{courseId}`
+- **URL**: `/api/v1/enrollment/{studentId}/enroll/{courseId}`
 - **Method**: `POST`
 
 

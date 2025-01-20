@@ -13,8 +13,12 @@ public class Student {
 
     private String name;
 
-    @OneToMany(mappedBy = "student")
-    private Set<StudentCourseEnrollment> studentCourses;
+    @ManyToMany
+    @JoinTable(
+            name = "student_course",
+            joinColumns = @JoinColumn(name = "student_id"),
+            inverseJoinColumns = @JoinColumn(name = "course_id"))
+    private Set<Course> courses;
 
     public Long getId() {
         return id;
@@ -32,12 +36,12 @@ public class Student {
         this.name = name;
     }
 
-    public Set<StudentCourseEnrollment> getStudentCourses() {
-        return studentCourses;
+    public Set<Course> getCourses() {
+        return courses;
     }
 
-    public void setStudentCourses(Set<StudentCourseEnrollment> studentCourses) {
-        this.studentCourses = studentCourses;
+    public void setCourses(Set<Course> courses) {
+        this.courses = courses;
     }
 
     // Getters and setters
